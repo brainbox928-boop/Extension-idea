@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register for RouteWave advertising campaigns and complete identity verification for approved vehicle advertising opportunities."
+    />
+    <title>Register | RouteWave Advertising</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="RouteWave home">
+            <span class="brand-mark">RW</span>
+            <span class="brand-text">RouteWave</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+              <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+              <li class="nav-item ms-lg-3">
+                <a class="btn btn-primary btn-cta" href="register.html">Join a Campaign</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="register-page">
+      <section class="page-hero register-hero">
+        <div class="container">
+          <div class="row justify-content-center text-center py-5">
+            <div class="col-lg-8">
+              <p class="eyebrow">Participant registration</p>
+              <h1>Register for Mobile Advertising Opportunities</h1>
+              <p class="lead">Provide accurate information to support verification, campaign eligibility and communication.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section py-5 py-lg-6">
+        <div class="container">
+          <div class="form-shell">
+            <div class="form-progress mb-4">
+              <div class="progress-steps">
+                <div class="progress-step active">1 <span>Personal Information</span></div>
+                <div class="progress-step">2 <span>Identity Verification</span></div>
+                <div class="progress-step">3 <span>Payment Information</span></div>
+                <div class="progress-step">4 <span>Next of Kin</span></div>
+                <div class="progress-step">5 <span>Vehicle Information</span></div>
+                <div class="progress-step">6 <span>Review &amp; Submit</span></div>
+              </div>
+            </div>
+
+            <div class="security-note">
+              <strong>Privacy and security notice:</strong>
+              Please provide accurate information. Your information may be used for identity verification, campaign eligibility and payment processing. By submitting this form, you acknowledge that your information will be handled according to our Privacy Policy.
+            </div>
+
+            <form id="registrationForm" novalidate>
+              <div class="form-step active" data-step="0">
+                <div class="section-intro">
+                  <h2>Personal Information</h2>
+                  <p>Tell us about yourself and your basic contact details.</p>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label for="firstName" class="form-label">First Name <span class="required-dot">*</span></label>
+                    <input id="firstName" name="firstName" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="middleName" class="form-label">Middle Name</label>
+                    <input id="middleName" name="middleName" type="text" class="form-control" />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="lastName" class="form-label">Last Name <span class="required-dot">*</span></label>
+                    <input id="lastName" name="lastName" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="dob" class="form-label">Date of Birth <span class="required-dot">*</span></label>
+                    <input id="dob" name="dob" type="date" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="gender" class="form-label">Gender <span class="required-dot">*</span></label>
+                    <select id="gender" name="gender" class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="non-binary">Non-binary</option>
+                      <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="maritalStatus" class="form-label">Marital Status <span class="required-dot">*</span></label>
+                    <select id="maritalStatus" name="maritalStatus" class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="single">Single</option>
+                      <option value="married">Married</option>
+                      <option value="divorced">Divorced</option>
+                      <option value="widowed">Widowed</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="occupation" class="form-label">Occupation <span class="required-dot">*</span></label>
+                    <input id="occupation" name="occupation" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phoneNumber" class="form-label">Phone Number <span class="required-dot">*</span></label>
+                    <input id="phoneNumber" name="phoneNumber" type="tel" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address <span class="required-dot">*</span></label>
+                    <input id="email" name="email" type="email" class="form-control" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Home Address <span class="required-dot">*</span></label>
+                  </div>
+                  <div class="col-12">
+                    <label for="streetAddress" class="form-label">Block / PO Box / Street <span class="required-dot">*</span></label>
+                    <input id="streetAddress" name="streetAddress" type="text" class="form-control" placeholder="123 Main Street, Apt 4B" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="city" class="form-label">City <span class="required-dot">*</span></label>
+                    <input id="city" name="city" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="state" class="form-label">State <span class="required-dot">*</span></label>
+                    <input id="state" name="state" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="country" class="form-label">Country <span class="required-dot">*</span></label>
+                    <select id="country" name="country" class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="United States" selected>United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="zipCode" class="form-label">ZIP Code <span class="required-dot">*</span></label>
+                    <input id="zipCode" name="zipCode" type="text" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="1">
+                <div class="section-intro">
+                  <h2>Identity Verification</h2>
+                  <p>Upload documents needed to verify your identity and eligibility.</p>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="idType" class="form-label">Government-Issued ID Type <span class="required-dot">*</span></label>
+                    <select id="idType" name="idType" class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="national-id">National ID</option>
+                      <option value="international-passport">International Passport</option>
+                      <option value="driver-license">Driver's Licence</option>
+                      <option value="voter-card">Voter's Card</option>
+                      <option value="other-government-id">Other Government-Issued ID</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="idFront" class="form-label">Upload Front of Government-Issued ID <span class="required-dot">*</span></label>
+                    <input id="idFront" name="idFront" type="file" class="form-control" accept=".jpg,.jpeg,.png,.pdf" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="idBack" class="form-label">Upload Back of Government-Issued ID <span class="required-dot">*</span></label>
+                    <input id="idBack" name="idBack" type="file" class="form-control" accept=".jpg,.jpeg,.png,.pdf" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="selfie" class="form-label">Upload a Clear Selfie <span class="required-dot">*</span></label>
+                    <input id="selfie" name="selfie" type="file" class="form-control" accept=".jpg,.jpeg,.png,.pdf" required />
+                  </div>
+                </div>
+                <div class="inline-note mt-4">
+                  Upload a clear photo of yourself for identity verification. Your face should be clearly visible. Identity documents and biometric/selfie information are sensitive personal information and should be securely handled.
+                </div>
+              </div>
+
+              <div class="form-step" data-step="2">
+                <div class="section-intro">
+                  <h2>Payment Information</h2>
+                  <p>Provide banking information for approved payment processing.</p>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="accountName" class="form-label">Account Name <span class="required-dot">*</span></label>
+                    <input id="accountName" name="accountName" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="bankName" class="form-label">Bank Name <span class="required-dot">*</span></label>
+                    <input id="bankName" name="bankName" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="accountNumber" class="form-label">Account Number <span class="required-dot">*</span></label>
+                    <input id="accountNumber" name="accountNumber" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="bankCode" class="form-label">Bank Code <span class="required-dot">*</span></label>
+                    <input id="bankCode" name="bankCode" type="text" class="form-control" placeholder="For Nigeria, use the relevant bank code" required />
+                  </div>
+                  <div class="col-12">
+                    <label for="bankAddress" class="form-label">Bank Address <span class="required-dot">*</span></label>
+                    <textarea id="bankAddress" name="bankAddress" class="form-control" rows="3" required></textarea>
+                  </div>
+                </div>
+                <div class="inline-note mt-4">
+                  Payment information should only be submitted through an authorized and secure connection. Do not share passwords, PINs, OTPs, card CVVs or online banking login credentials.
+                </div>
+              </div>
+
+              <div class="form-step" data-step="3">
+                <div class="section-intro">
+                  <h2>Next of Kin</h2>
+                  <p>Provide your emergency contact information.</p>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="kinName" class="form-label">Full Name <span class="required-dot">*</span></label>
+                    <input id="kinName" name="kinName" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="kinPhone" class="form-label">Phone Number <span class="required-dot">*</span></label>
+                    <input id="kinPhone" name="kinPhone" type="tel" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="kinAddress" class="form-label">Address <span class="required-dot">*</span></label>
+                    <textarea id="kinAddress" name="kinAddress" class="form-control" rows="3" required></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="relationship" class="form-label">Relationship <span class="required-dot">*</span></label>
+                    <input id="relationship" name="relationship" type="text" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="4">
+                <div class="section-intro">
+                  <h2>Vehicle Information</h2>
+                  <p>Tell us about the vehicle used for campaign eligibility.</p>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label for="vehicleType" class="form-label">Vehicle Type <span class="required-dot">*</span></label>
+                    <select id="vehicleType" name="vehicleType" class="form-select" required>
+                      <option value="">Select</option>
+                      <option value="car">Car</option>
+                      <option value="suv">SUV</option>
+                      <option value="van">Van</option>
+                      <option value="bus">Bus</option>
+                      <option value="truck">Truck</option>
+                      <option value="motorcycle">Motorcycle</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="vehicleMake" class="form-label">Vehicle Make <span class="required-dot">*</span></label>
+                    <input id="vehicleMake" name="vehicleMake" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label for="vehicleModel" class="form-label">Vehicle Model <span class="required-dot">*</span></label>
+                    <input id="vehicleModel" name="vehicleModel" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="vehicleYear" class="form-label">Vehicle Year <span class="required-dot">*</span></label>
+                    <input id="vehicleYear" name="vehicleYear" type="number" class="form-control" min="1900" max="2100" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="vehicleReg" class="form-label">Vehicle Registration Number <span class="required-dot">*</span></label>
+                    <input id="vehicleReg" name="vehicleReg" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="vehicleColour" class="form-label">Vehicle Colour <span class="required-dot">*</span></label>
+                    <input id="vehicleColour" name="vehicleColour" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="primaryLocation" class="form-label">Primary Driving Location / City <span class="required-dot">*</span></label>
+                    <input id="primaryLocation" name="primaryLocation" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="weeklyDistance" class="form-label">Average Weekly Driving Distance <span class="required-dot">*</span></label>
+                    <input id="weeklyDistance" name="weeklyDistance" type="text" class="form-control" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="vehiclePhoto" class="form-label">Upload Vehicle Photo <span class="required-dot">*</span></label>
+                    <input id="vehiclePhoto" name="vehiclePhoto" type="file" class="form-control" accept=".jpg,.jpeg,.png,.pdf" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="5">
+                <div class="section-intro">
+                  <h2>Review &amp; Submit</h2>
+                  <p>Confirm the information and consent before submitting your application.</p>
+                </div>
+                <div class="review-box">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="confirmAccuracy" required />
+                    <label class="form-check-label" for="confirmAccuracy">I confirm that the information provided is accurate.</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+                    <label class="form-check-label" for="agreeTerms">I agree to the Terms &amp; Conditions.</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="agreePrivacy" required />
+                    <label class="form-check-label" for="agreePrivacy">I have read and understood the Privacy Policy.</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consentProcessing" required />
+                    <label class="form-check-label" for="consentProcessing">I consent to the processing of my information for registration, verification and campaign administration.</label>
+                  </div>
+                </div>
+                <div class="inline-note mt-4">
+                  Sensitive information should be transmitted only over a secure connection. Real validation must be performed on a secure server, with encrypted transit, access controls, secure storage and retention policies. This frontend is a prototype and does not submit personal or banking information to a live backend.
+                </div>
+                <div class="inline-note mt-3">
+                  HTTPS, secure server-side validation, encryption in transit, access controls, secure document storage, data retention policies, privacy policy, user consent and compliance with applicable Nigerian data-protection requirements are required for a live implementation.
+                </div>
+              </div>
+
+              <div class="form-navigation mt-4 d-flex justify-content-between gap-3 flex-wrap">
+                <button type="button" class="btn btn-outline-secondary btn-lg" id="prevStep" style="display:none;">Previous</button>
+                <button type="button" class="btn btn-primary btn-lg ms-auto" id="nextStep">Next</button>
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" style="display:none;">Submit Registration</button>
+              </div>
+            </form>
+
+            <div id="successMessage" class="alert alert-success mt-4" role="alert" style="display:none;">
+              <h3>Registration Submitted</h3>
+              <p>Thank you. Your application has been received and will be reviewed. You will be contacted using the information provided if additional verification is required.</p>
+            </div>
+
+            <div class="frontend-note mt-4">
+              <!-- BACKEND REQUIRED: Connect this form to a secure backend/API before collecting real personal, identity or banking information. -->
+              This frontend prototype demonstrates the registration flow only. Real personal, identity and banking information must be securely processed on a protected backend with appropriate access control and legal compliance.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-brand">
+              <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="brand-mark">RW</span>
+                <span class="brand-text">RouteWave</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h4>Participants</h4>
+            <ul>
+              <li><a href="register.html">Registration</a></li>
+              <li><a href="#">Campaigns</a></li>
+              <li><a href="how-it-works.html#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:hello@routewave-ad.com">hello@routewave-ad.com</a></li>
+              <li><a href="tel:+2348000000000">+234 (0) 800 000 0000</a></li>
+              <li><a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer">WhatsApp Customer Care</a></li>
+              <li><a href="https://t.me/yourtelegramhandle" target="_blank" rel="noopener noreferrer">Telegram Customer Care</a></li>
+              <li>Office Address: Houston, Texas, USA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 RouteWave. All rights reserved.</p>
+          <p class="small-note">Participation is subject to eligibility, identity verification and campaign availability. Payment, where applicable, is determined by individual campaign terms.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
